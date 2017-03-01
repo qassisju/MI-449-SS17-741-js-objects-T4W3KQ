@@ -46,7 +46,6 @@ var updateDisplayedJoke = function () {
     var setupParagraph = '<p>' + jokeContent['setup'] + '</p>'
     var punchlineParagraph = '<p>' + jokeContent['punchline'] + '</p>'
     jokeBox.innerHTML = setupParagraph + punchlineParagraph
-    updateJokes()
   }
 }
 
@@ -56,11 +55,12 @@ var deleteJoke = function () {
   var jokeContent = jokes[deletedJokeKey]
   if (jokeContent === undefined) {
     window.alert('That joke is not here')
+    updateJokes()
   } else {
     delete jokes[deletedJokeKey]
     console.log('It worked')
+    updateJokes()
   }
-  updateJokes()
 }
 
 // Function to keep track of all other
@@ -98,8 +98,6 @@ var updateJokes = function () {
 
 // Update the page immediately on startup
 updatePage()
-updateJokes()
-
 // ---------------
 // EVENT LISTENERS
 // ---------------
