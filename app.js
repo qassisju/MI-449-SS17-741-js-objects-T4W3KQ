@@ -67,6 +67,7 @@ var deleteJoke = function () {
 // page update functions, so that we
 // can call them all at once
 var updatePage = function () {
+  loadJokes
   updateJokesMenu()
   updateDisplayedJoke()
 }
@@ -90,6 +91,12 @@ var updateJokes = function () {
   var stringJokes = JSON.stringify(jokes)
   window.localStorage.setItem('jokes', stringJokes)
   updatePage()
+}
+var loadJokes = function () {
+  var currentJokes = window.localStorage.getItem('jokes')
+  if (currentJokes) {
+    JSON.parse(currentJokes)
+  }
 }
 
 // -------
