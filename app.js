@@ -95,7 +95,7 @@ var updateJokes = function () {
 var loadJokes = function () {
   var currentJokes = window.localStorage.getItem('jokes')
   if (currentJokes) {
-    JSON.parse(currentJokes)
+    jokes = JSON.parse(currentJokes)
   }
 }
 
