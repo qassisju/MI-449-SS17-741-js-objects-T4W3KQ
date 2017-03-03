@@ -67,7 +67,7 @@ var deleteJoke = function () {
 // page update functions, so that we
 // can call them all at once
 var updatePage = function () {
-  loadJokes
+  loadJokes()
   updateJokesMenu()
   updateDisplayedJoke()
 }
