@@ -1,7 +1,17 @@
 // ----
 // DATA
 // ----
-
+var config = {
+  apiKey: 'AIzaSyBLw8yQuin3aEH8BSYtsfECUUso9Koik6M',
+  authDomain: 'joke-a-tron9000.firebaseapp.com',
+  databaseURL: 'https://joke-a-tron9000.firebaseio.com',
+  projectId: 'joke-a-tron9000',
+  storageBucket: 'joke-a-tron9000.appspot.com',
+  messagingSenderId: '1078832782012'
+}
+firebase.initializeApp(config)
+firebase.auth().signInAnonymously()
+firebase.database().ref('jokes/the horse')
 // A couple jokes to start with
 var jokes = {
   'the horse': {
